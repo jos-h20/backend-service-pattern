@@ -79,11 +79,12 @@ echo ECS_SERVICE_NAME: $ECS_SERVICE_NAME
     "Statement": [
         {
             "Effect": "Allow",
+            "Principal": "*",
             "Action": [
                 "s3:GetObject",
                 "s3:GetObjectVersion"
             ],
-            "Resource": "arn:aws:s3:::assign9-config/*"
+            "Resource": "arn:aws:s3:::ass9-config/*"
         }
     ]
 }
@@ -97,6 +98,7 @@ echo ECS_SERVICE_NAME: $ECS_SERVICE_NAME
     "Statement": [
         {
             "Effect": "Allow",
+            "Principal": "*",
             "Action": [
                 "ecs:DescribeServices",
                 "ecs:DescribeTaskDefinition",
